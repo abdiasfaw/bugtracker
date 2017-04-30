@@ -1,0 +1,55 @@
+body{
+	background: #A9A9A9;
+	background: #000000;
+	color: rgba(9, 4, 4, 0.84);
+	padding: 5px;
+	margin: 5px;;
+//	border: 1px solid black;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+
+#header{
+	width: 100%;
+}
+
+.body-element{
+	width: 400px;
+	margin: auto;
+	padding: 40px;
+	border-radius: 50px;
+	background: #A9A9A9;
+	color: #DCDCDC;
+	color: black;
+}
+#login-label{
+	text-align: center;
+	font-size: 2em;
+	color: #000000;
+}
+#signup-form input, #login-form input {
+	margin-bottom: 5px;
+}
+#remember-me{
+	padding-bottom: 5px;
+}
+
+#account{
+	text-align: center;
+	padding-top: 1em;
+}
+
+#bt-sidebar {
+	border: 1px solid black;
+	width: 15em;
+	float: left;
+	background: black;
+	border-radius: 25px;
+	
+}
+
+#footer{
+	padding-top: 120px;
+	color: #4682B4;
+}
+
