@@ -13,15 +13,16 @@ var app = angular.module('bugTracker', [
 
 
 //ISSUE(Abdi Asfaw): Add and setup the events for the angular controllers
-app.controller('homeController', ['$scope', function homeController($scope){
-	$scope.label = 'BugTracker';
-	$scope.menuItems = {
-		home: 'Home',
-		about: 'About',
-		contact:'Contact',
-		Settings:'Settings'
-	};
-}]);
+app.controller('homeController', ['$scope', 
+	function homeController($scope){
+		$scope.label = 'BugTracker';
+		$scope.menuItems = {
+			home: 'Home',
+			about: 'About',
+			settings:'Settings'
+		};
+}
+]);
 
 
 
@@ -41,6 +42,17 @@ app.config(['$routeProvider','$locationProvider',
 			title: 'Register',
 			templateUrl: 'templates/signup.html',
 			controller: 'signupController'
+		}).when('/forgot-pass', {
+			title: 'Forgot Password',
+			templateUrl: 'templates/forgotPass.html',
+			controller:'resetPassController'
+		}).when('/dashboard', {
+			title: 'Dashboard',
+			templateurl:'templates/dashboard.html',
+			controller: 'dashboardController'
+		}).when('/about', {
+			title: 'About Us',
+			templateUrl: 'templates/about.html'
 		}).otherwise({
 			redirectTo:'/'
 		});
