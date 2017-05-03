@@ -15,7 +15,7 @@
 		
 		
 		public function __construct(){
-			this->$con = mysqli_connect($DB_HOST, $DB_USERNAME, $DB_PASSWORD , $DB_NAME) or die(errorLog("Couldn't login to the db: " . mysqli_connect_error()));
+			$con = mysqli_connect($DB_HOST, $DB_USERNAME, $DB_PASSWORD , $DB_NAME) or die(errorLog("Couldn't login to the db: " . mysqli_connect_error()));
 		}
 		
 		

@@ -52,7 +52,8 @@ input {
 #remember-me {
   padding-bottom: 5px;
 }
-#account {
+#account,
+#forgot-pass {
   text-align: center;
   padding-top: 1em;
 }

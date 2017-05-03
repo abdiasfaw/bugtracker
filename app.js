@@ -8,9 +8,16 @@ var app = angular.module('bugTracker', [
 
 
 //ISSUE(Abdi Asfaw): Implement angular factory below
+ /*
+ app.factory('Login', ['$resource',
+ 	function ($resource){
+	 	return $resource("http://localhost/bugtracker/api/",{},{
+		 	login: {method: 'POST', cache: false, isArray: false};
+	 	});
+ 	}
+ ]);
 
-
-
+*/
 
 //ISSUE(Abdi Asfaw): Add and setup the events for the angular controllers
 app.controller('homeController', ['$scope', 
@@ -23,8 +30,20 @@ app.controller('homeController', ['$scope',
 		};
 }
 ]);
+/* 
+app.controller('loginController',['$scope','$location','Login','setCreds',
+	function loginController($scope, $location, Login, setCreds){
+		$scope.submit = function (){
+			$scope.sub = true;
+			
+			var postData = {
+				//FIXME(Abdi Asfaw): Finish this controller from section 'Adding a login Controller' in the angular book.
+			}
+		}
+	}
+]);
 
-
+*/
 
 //TOFIX(Abdi Asfaw): Add the templates and controllers
 app.config(['$routeProvider','$locationProvider',
@@ -46,13 +65,14 @@ app.config(['$routeProvider','$locationProvider',
 			title: 'Forgot Password',
 			templateUrl: 'templates/forgotPass.html',
 			controller:'resetPassController'
-		}).when('/dashboard', {
+		}).when('/dash', {
 			title: 'Dashboard',
 			templateurl:'templates/dashboard.html',
 			controller: 'dashboardController'
 		}).when('/about', {
 			title: 'About Us',
-			templateUrl: 'templates/about.html'
+			templateUrl: 'templates/about.html',
+			controller: 'aboutController'
 		}).otherwise({
 			redirectTo:'/'
 		});
