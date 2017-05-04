@@ -6,11 +6,8 @@
 + Feed !!!
 + Tasks
 + Bugs
-+ Milestones ???
 + Calendar
-+ Documents ???
 + Timesheet !!!
-+ Invoices & Expenses ???
 + Forums
 + Pages
 + Chat
